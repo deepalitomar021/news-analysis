@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Analysis</title>
+    <style>
+        p{
+            margin-left: 8px;
+        }
+        h1{
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        .news-box {
+        /* Box properties */
+        border: 1px solid #ccc; /* Add a 1px solid gray border */
+        padding: 10px;  /* Add some space between the content and the border */
+        margin: 10px;  /* Add some space around the box */
+        background-color: #ebe8e8; /* Optional: Set a background color */
+        }
+        table {
+        border-collapse: collapse; /* Combine table borders for a cleaner look */
+        width: 100%; /* Make the table span the full width */
+        
+        }
+
+        th, td {
+        padding: 10px; /* Add some padding for readability */
+        border: 1px solid #e3dede; /* Add a 1px solid gray border for each cell */
+        text-align: center; /* Align text to the left */
+        }
+
+        th {
+        background-color: #cdc9c9; /* Optional: Set a light gray background for headers */
+        font-weight: bold; /* Make headers bold for emphasis */
+        }
+        .navbar {
+    
+        height: 50px;
+        background: url("/static/bg_im1.jpg") no-repeat;
+        background-size: 50%;
+        background-position: center;
+        }
+
+        .navbar a {
+        float: left;
+        display: block;
+        color: #bc3131;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        color: #2d2b2b;
+        border-radius: 30px;
+        }
+
+        .navbar a:hover {
+        background-color: #868181;
+        color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/login">Admin Access</a>
+    </div>
+    <h1>Analysis Results</h1>
+    <!-- <p><b>URL:</b><a href="{{ url }}" >{{ url }}</a></p>
+    <p><b>News Text:</b> {{ news_text }}</p>
+    <p><b>Number of Sentences:</b> {{ num_sentences }}</p>
+    <p><b>Number of Words:</b> {{ num_words }}</p>
+    <p><b>Number of Stop Words:</b> {{ count_stopWords }}</p>
+    <p><b>POS Tags:</b> {{ dict_pos }}</p>
+    <p><b>News Category:</b> {{ str1 }}</p> -->
+    <p><b>URL:</b><a href="{{ url }}" >{{ url }}</a></p>
+    <div class="news-box">
+        <p align="center"><b>News Text</b></p>
+        <p>{{ news_text }}</p>
+    </div>
+    <table>
+        <tr>
+            <th><b>Num Sentences</b></th>
+            <th><b>Num Words</b></th>
+            <th><b>Num Stop-Words</b></th>
+            <th><b>UPOS Tags</b></th>
+            <th><b>News Category</b></th>
+        </tr>
+        <tr>
+            <td>{{ num_sentences }}</td>
+            <td>{{ num_words }}</td>
+            <td>{{ count_stopWords }}</td>
+            <td>{{ dict_pos }}</td>
+            <td>{{ str1 }}</td>
+        </tr>
+        </table><hr>
+
+</body>
+</html>

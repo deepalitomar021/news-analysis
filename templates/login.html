@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/Admin_login">Admin Access</a>
+    </div><hr>
+    <h1 align="center">Admin-Login Portal</h1>
+    <div class="container">
+        <div class="login-form">
+            <h1>Login</h1>
+        
+            <form action="/Admin_login" method="POST">
+                <input type="email" name="email" placeholder="Enter Email" required><br>
+                <input type="password" name="password" placeholder="Enter Password" required><br>
+                {% if message %}
+                <p>{{ message }}</p>
+                {% endif %}
+                <button type="submit">Login</button>
+            </form>
+            <form action="/login">
+                <button type="submit">Google Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

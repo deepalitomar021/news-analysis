@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL History</title>
+    <style>
+        p{
+            margin-left: 8px;
+        }
+        h1{
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        .news-box {
+        /* Box properties */
+        border: 1px solid #ccc; /* Add a 1px solid gray border */
+        padding: 10px;  /* Add some space between the content and the border */
+        margin: 10px;  /* Add some space around the box */
+        background-color: #ebe8e8; /* Optional: Set a background color */
+        }
+        table {
+        border-collapse: collapse; /* Combine table borders for a cleaner look */
+        width: 100%; /* Make the table span the full width */
+        
+        }
+
+        th, td {
+        padding: 10px; /* Add some padding for readability */
+        border: 1px solid #e3dede; /* Add a 1px solid gray border for each cell */
+        text-align: center; /* Align text to the left */
+        }
+
+        th {
+        background-color: #cdc9c9; /* Optional: Set a light gray background for headers */
+        font-weight: bold; /* Make headers bold for emphasis */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>History of the given URLs</h1>
+    {% for row in history %}
+        <p><b>Sr. No. :</b> {{ row[0] }}</p>
+        <p><b>URL:</b><a href="{{ row[1] }}" >{{ row[1] }}</a></p>
+        <div class="news-box">
+            <p align="center"><b>News Text</b></p>
+            <p>{{ row[2] }}</p>
+        </div>
+        <table>
+            <tr>
+              <th><b>Num Sentences</b></th>
+              <th><b>Num Words</b></th>
+              <th><b>Num Stop-Words</b></th>
+              <th><b>UPOS Tags</b></th>
+              <th><b>News Category</b></th>
+            </tr>
+            <tr>
+              <td>{{ row[3] }}</td>
+              <td>{{ row[4] }}</td>
+              <td>{{ row[5] }}</td>
+              <td>{{ row[6] }}</td>
+              <td>{{ row[7] }}</td>
+            </tr>
+          </table><hr><hr>
+        
+    {% endfor %}
+</body>
+</html>

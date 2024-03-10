@@ -1,0 +1,147 @@
+/* For login.html */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background: url("/static/back_img.jpg") no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 400px;
+    margin-top: 70px ;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f4f1f1;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    margin-top: 60px;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.moving-text-container {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+.moving-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 40px;
+    padding: 0;
+    white-space: nowrap;
+    font-size:x-large;
+    animation: moveText 20s linear infinite; /* Change animation duration as needed */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+  }
+  
+  @keyframes moveText {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+.navbar {
+    
+    height: 50px;
+    background: url("/static/bg_im1.jpg") no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #bc3131;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #dfd7d7;
+    border-radius: 30px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width: 25%;
+    height: 40%;
+    background: rgba(206, 203, 186, 0.5); /* 50% transparency */
+    backdrop-filter: blur(5px); /* 5px blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically and horizontally */
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -68%);
+    width: 50%;
+    height: 40%;
+    background: rgba(206, 203, 186, 0.5); /* 50% transparency */
+    backdrop-filter: blur(5px); /* 5px blur effect */
+    display: flexbox;
+    justify-content: center;
+    align-items: center; /* Center the content vertically and horizontally */
+    border-radius: 20px;
+}
