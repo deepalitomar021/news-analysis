@@ -96,7 +96,7 @@ button[type="submit"]:hover {
   }
 .navbar {
     
-    height: 60px;
+    height: 50px;
     background: url("/static/bg_im1.jpg") no-repeat;
     background-size: 50%;
     background-position: center;
