@@ -22,7 +22,7 @@ google = oauth.register(
     access_token_params=None,
     refresh_token_url=None,
     refresh_token_params=None,
-    redirect_uri='http://127.0.0.1:5000/history',
+    redirect_uri='https://news-analysis-oowi.onrender.com/history',
     client_kwargs={'scope': 'openid profile email'},
 )
 
