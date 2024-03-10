@@ -3,6 +3,7 @@ from authlib.integrations.flask_client import OAuth
 import requests
 from bs4 import BeautifulSoup
 import nltk
+nltk.download('all')
 from nltk.tokenize import sent_tokenize, word_tokenize
 import psycopg2
 import re
