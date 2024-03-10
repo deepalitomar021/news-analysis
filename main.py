@@ -28,8 +28,8 @@ google = oauth.register(
 
 @app.route('/login')
 def login():
-    # redirect_uri = url_for('history', _external=True)
-    redirect_uri='https://news-analysis-oowi.onrender.com/history',
+    redirect_uri = url_for('history', _external=True)
+    
     return google.authorize_redirect(redirect_uri)
 
 @app.route('/authorize')
