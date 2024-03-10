@@ -56,7 +56,7 @@ def logout():
 
 
 # Database connection
-conn = psycopg2.connect(host="localhost",database="dhp2024",user="postgres",password="dp15#21/L@")
+conn = psycopg2.connect(host="dpg-cnmnooo21fec739809ig-a",database="dhp2024_tgc0",user="dhpnews",password="3uzMHJk0GtKKmdYOuthNyfh5PnCEULlr")
 cur = conn.cursor()
 
 # Create table if not exists
