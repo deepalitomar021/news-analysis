@@ -100,6 +100,7 @@ button[type="submit"]:hover {
     background: url("/static/bg_im1.jpg") no-repeat;
     background-size: 50%;
     background-position: center;
+    margin-top: 10px;
 }
 
 .navbar a {
