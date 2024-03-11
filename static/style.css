@@ -146,3 +146,18 @@ button[type="submit"]:hover {
     align-items: center; /* Center the content vertically and horizontally */
     border-radius: 20px;
 }
+
+/* For small devices (phones) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* Adjust width for small screens */
+    }
+
+    .content {
+        width: 90%; /* Adjust width for small screens */
+    }
+
+    input[type="text"] {
+        width: 80%; /* Adjust width for small screens */
+    }
+}
