@@ -3,7 +3,9 @@ from authlib.integrations.flask_client import OAuth
 import requests
 from bs4 import BeautifulSoup
 import nltk
-nltk.download('all')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('universal_tagset')
 from nltk.tokenize import sent_tokenize, word_tokenize
 import psycopg2
 import re
