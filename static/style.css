@@ -147,17 +147,17 @@ button[type="submit"]:hover {
     border-radius: 20px;
 }
 
-/* For small devices (phones) */
+/* Responsive styles */
 @media only screen and (max-width: 600px) {
     .container {
-        width: 90%; /* Adjust width for small screens */
+        padding: 10px;
     }
 
-    .content {
-        width: 90%; /* Adjust width for small screens */
+    .moving-text-container {
+        height: 60px;
     }
 
-    input[type="text"] {
-        width: 100%; /* Adjust width for small screens */
+    .moving-text {
+        margin-top: 20px;
     }
 }
