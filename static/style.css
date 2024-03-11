@@ -158,6 +158,6 @@ button[type="submit"]:hover {
     }
 
     input[type="text"] {
-        width: 80%; /* Adjust width for small screens */
+        width: 100%; /* Adjust width for small screens */
     }
 }
