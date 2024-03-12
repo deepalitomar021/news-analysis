@@ -160,4 +160,24 @@ button[type="submit"]:hover {
     .moving-text {
         margin-top: 20px;
     }
+
+    /* Adjust navbar */
+    .navbar {
+        padding: 0 10px;
+    }
+
+    /* Adjust navbar links */
+    .navbar a {
+        padding: 10px;
+    }
+
+    /* Adjust form input */
+    input[type="text"] {
+        margin-top: 20px;
+    }
+
+    /* Adjust button */
+    button[type="submit"] {
+        margin-top: 20px;
+    }
 }
