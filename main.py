@@ -12,8 +12,12 @@ import psycopg2
 import re
 import urllib
 
+# Initialize Flask app
 app = Flask(__name__)
+# Set a secret key for the session
 app.secret_key = b'1122'
+
+# OAuth for Google login
 oauth = OAuth(app)
 google = oauth.register(
     name='google',
@@ -29,12 +33,14 @@ google = oauth.register(
     client_kwargs={'scope': 'openid profile email'},
 )
 
+# Route for user login
 @app.route('/login')
 def login():
     redirect_uri = url_for('history', _external=True)
     
     return google.authorize_redirect(redirect_uri)
 
+# Route for handling authorization after login
 @app.route('/authorize')
 def authorize():
     token = google.authorize_access_token()
@@ -45,6 +51,7 @@ def authorize():
     session['user_info'] = user_info
     return redirect(url_for('dashboard'))
 
+# Route for user dashboard
 @app.route('/dashboard')
 def dashboard():
     if 'user_info' in session:
@@ -53,6 +60,7 @@ def dashboard():
     else:
         return redirect(url_for('login'))
 
+# Route for user logout
 @app.route('/logout')
 def logout():
     session.pop('user_info', None)
@@ -75,10 +83,12 @@ cur.execute('''CREATE TABLE IF NOT EXISTS news_data
                 news_category text)''')
 conn.commit()
 
+# Route for user logout
 @app.route('/')
 def index():
     return render_template('index.html')
 
+# Route for submitting news URL
 @app.route('/submit',methods=['POST','GET'])
 def submit():
     
@@ -134,8 +144,7 @@ def submit():
             else:
                 dict_pos[i[1]]+=1
 
-        # dict_pos=json.dumps(dict_pos)
-        # Store data in database
+
         cur.execute('''INSERT INTO news_data (url, news_text, num_sentences, num_words,num_stopwords, pos_tags, news_category)
                         VALUES (%s, %s, %s, %s, %s,%s,%s)''',
                         (url, news_text, num_sentences, num_words, count_stopWords, str(dict_pos), str1))
@@ -150,18 +159,23 @@ def submit():
 ADMIN_EMAIL = "admin@example.com"
 ADMIN_PASSWORD = "admin_1234"
 
+# Route for home page
 @app.route('/')
 def home():
     return render_template('index.html')
 
+# Route for submitting news text
 @app.route('/submit', methods=['POST'])
 def sub():
     # Your code for extracting and analyzing news text goes here
     pass
+
+# Route for rendering login page
 @app.route("/login_page")
 def login_page():
     return render_template('login.html')
 
+# Route for viewing submission history
 @app.route('/history')
 def history():
     # Fetch history from database
@@ -169,6 +183,7 @@ def history():
     history = cur.fetchall()
     return render_template('history.html', history=history)
 
+# Route for admin login
 @app.route('/Admin_login', methods=['GET', 'POST'])
 def Admin_slogin():
     if request.method == 'POST':
