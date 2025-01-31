@@ -5,7 +5,7 @@ This is a Flask-based web application for analyzing news articles from the Times
 
 ## Live Demo 
 
-Link
+Live Link
 
 ## Features
 
