@@ -3,6 +3,10 @@
 
 This is a Flask-based web application for analyzing news articles from the Times of India. The application allows users to submit news URLs, extract and analyze the news text, and view the analysis results. It also includes user authentication via Google OAuth and an admin login for viewing submission history.
 
+## Live Demo 
+
+Link
+
 ## Features
 
 - **User Authentication**: Users can log in using their Google account.
